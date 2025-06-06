@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root{
+    --Very-dark-blue-main-background: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue-card-background: hsl(244, 38%, 16%);
+    --Soft-violet-accent: hsl(277, 64%, 61%);
+
+    --WhiteMain-heading-stats: hsl(0, 0%, 100%);
+    --SlightlyTransparentWhite-main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --SlightlyTransparentWhite-stat-headings: hsla(0, 0%, 100%, 0.6);
+    --Layer: rgba(110,30,160,0.65);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    background-color: var(--Very-dark-blue-main-background);
+    font-size: 15px;
+}
+.container{
+    width: 325px;
+    height: 780px;
+    margin: 90px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Dark-desaturated-blue-card-background);
+    text-align: center;
+    border-radius: 6px;
+    overflow: hidden;
+}
+/* -----------> Image Container <----------- */
+.imageContainer .image{
+    background-image: url(images/image-header-mobile.jpg);
+    width: 100%;
+    height: 239px;
+    background-size: 100%;
+}
+.imageContainer .layer{
+    background-color: var(--Layer);
+    height: 100%;
+    width: 100%;
+}
+/* -----------> Card Info <----------- */
+.cardInfo{
+    margin: 45px 34px;
+
+}
+.cardInfo h1{
+    font-size: 1.75em;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 0;
+    color: var(--WhiteMain-heading-stats);
+    letter-spacing: 1px;
+}
+.cardInfo h1 .colored{
+    color: var(--Soft-violet-accent);
+}
+.cardInfo p{
+    color: var(--SlightlyTransparentWhite-main-paragraph);
+    margin: 0;
+    margin-top: 18px;
+    line-height: 25px;
+}
+/* -----------> Card Stats <----------- */ 
+.cardStats .stat .quantity{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--WhiteMain-heading-stats);
+    letter-spacing: 1px;
+}
+.cardStats .stat .unit{
+    font-family: "Lexend Deca", sans-serif;
+    color: var(--SlightlyTransparentWhite-stat-headings);
+    font-size: 0.75em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-top: 6px;
+}
+.cardStats #stat2{
+    margin: 30px 0;
+}
+/* -----------> Footer <----------- */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--SlightlyTransparentWhite-main-paragraph);
+    margin-bottom: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* -----------> 768px <----------- */
+@media screen and (min-width: 768px) {
+    .container{
+        width: 540px;
+        height: 750px;
+    }
+    /* -----------> Image Container <----------- */
+    .imageContainer .image{
+        background-image: url(images/image-header-desktop.jpg);
+        width: 100%;
+        height: 446px;
+    }
+    /* -----------> Main <----------- */
+    main{
+        display: flex;
+        flex-direction: row;
+        margin: auto 40px;
+    }
+    /* -----------> Card Info <----------- */
+    .cardInfo{
+        margin: auto 0;
+        margin-right: 40px;
+    }
+    .cardInfo h1{
+        font-size: 2em;
+    }
+    .cardInfo p{
+        font-size: 1.2em;
+    }
+}
+/* -----------> 1200px <----------- */
+@media screen and (min-width: 1200px){
+    .container{
+        width: 1110px;
+        height: 446px;
+        flex-direction: row-reverse;
+    }
+    /* -----------> Image Container <----------- */
+    .imageContainer .image{
+        width: 540px;
+        height: 446px;
+    }
+    /* -----------> Main <----------- */
+    main{
+        display: flex;
+        flex-direction: column;
+        margin: 78px 75px;
+        text-align: left;
+    }
+    /* -----------> Card Info <----------- */
+    .cardInfo{
+        margin: 0;
+        margin-bottom: 60px;
+    }
+    .cardInfo h1{
+        font-size: 2.533em;
+        line-height: 47px;
+        letter-spacing: 2px;
+    }
+    .cardInfo p{
+        font-size: 1.105em;
+        margin-top: 28px;
+        line-height: 27px;
+    }
+    /* -----------> Card Stats <----------- */ 
+    .cardStats{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .cardStats #stat2{
+        margin: 0;
+        margin-right: 60px;
+    }
+    .cardStats .stat{
+        margin-right: 60px;
+    }
+}
